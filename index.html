@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="keywords" content="HackBulgaria, Education, Classroom">
+  <meta name="description" content="HackBulgaria - free programming courses">
+  <meta name="author" content="Martina Radeva">
+  <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>HackBulgaria Task Manager</title>
+</head>
+<body>
+  <h2>HackBulgaria Task Manager</h2>
+  <div class="main">
+    <button class="btn btn-primary btn-lg add-new-task" data-toggle="modal" data-target="#task-modal-form">Add a new task</button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="task-modal-form" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title" id="myModalLabel">Create new task</h4>
+          </div>
+          <div class="modal-body">
+            <form class="form-horizontal" role="form">
+              <div class="form-group">
+                <input class="task-title" type="text" placeholder="Title">
+              </div>
+              <div class="form-group">
+                <input class="task-date" type="date">
+              </div>
+              <div class="form-group">
+                <textarea class="task-description" placeholder="Description"></textarea>
+              </div>
+              <div class="form-group">
+                <input type="checkbox" name="task-starred">Starred
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary create-task" data-dismiss="modal">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="bower_components/handlebars/handlebars.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+</body>
+</html>
