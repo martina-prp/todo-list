@@ -11,8 +11,9 @@
   <h2>HackBulgaria Task Manager</h2>
   <div class="main">
     <button class="btn btn-primary btn-lg add-new-task" data-toggle="modal" data-target="#task-modal-form">Add a new task</button>
+    <button class="btn btn-primary btn-lg settings" data-toggle="modal-setiings" data-target="#settings-modal-form">Settings</button>
 
-    <!-- Modal -->
+    <!-- Task Modal Form -->
     <div class="modal fade" id="task-modal-form" tabindex="-1" role="dialog">
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
@@ -44,10 +45,29 @@
       </div>
     </div>
 
+    <table class="table task-table table-bordered">
+      <tr class="active">
+        <th>Task</th>
+        <th>Date</th>
+        <th>Star</th>
+        <th>Options</th>
+      </tr>
+    </table>
+
   </div>
   <script src="bower_components/jquery/dist/jquery.js"></script>
   <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
   <script src="bower_components/handlebars/handlebars.js"></script>
   <script type="text/javascript" src="app.js"></script>
+  <script type="text/x-handlebars-template" id="task-tpl">
+    {{#each tasks}}
+      <tr>
+        <td>{{title}}</td>
+        <td>{{date}}</td>
+        <td>{{star}}</td>
+        <td>{{description}}</td>
+      </tr>
+    {{/each}}
+  </script>
 </body>
 </html>
